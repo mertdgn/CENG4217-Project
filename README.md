@@ -3,10 +3,12 @@ Python Scripts to benchmark SV Calling algorithms.
 
 ### Requirements
 - Python 3
+- matplotlib, psutil and numpy libraries for python
   ##### For Illumına Benchmarking
     - [Tardis](https://github.com/BilkentCompGen/tardis "Tardis")
     - [Delly](https://github.com/dellytools/delly "Delly")
     - [Manta](https://github.com/Illumina/manta "Manta")
+    - [bcftools](https://github.com/samtools/bcftools "bcftools")
   ##### For Nanopore Benchmarking
     - [cuteSV](https://github.com/tjiangHIT/cuteSV "cuteSV")
     - [SVIM](https://github.com/eldariont/svim "SVIM")
