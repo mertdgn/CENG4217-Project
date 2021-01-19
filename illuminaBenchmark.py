@@ -110,7 +110,6 @@ def runDelly():
         cpuPercentTemp = p.cpu_percent(interval=1)
         if(cpuPercentTemp >= cpuPercent):
             cpuPercent = cpuPercentTemp        
-        #print('.', end = '', flush=True)
     
     memStatus = (rss, vms) 
     popen.wait()
@@ -132,10 +131,6 @@ inputBam = sys.argv[1]
 reference = sys.argv[2]
 sonic = sys.argv[3]
 outputName = sys.argv[4]
-#inputBam="HG00114.chrom20.ILLUMINA.bwa.GBR.low_coverage.20120522.bam"
-#reference = "hs37d5.fa"
-#sonic = "human_g1k_v37.sonic"
-#outputName = "pyOut"
 excl = "human.hg19.excl.tsv"
 argsTardis = ("tardis", "--no-interdup", "--no-mei" , "-i" , inputBam, "--ref", reference, "--sonic", sonic, "--out", "IlluminaResults/tardis/"+outputName+"Tardis")
 argsDelly = ("delly", "call", "-o", "IlluminaResults/delly/"+outputName+"Delly.bcf", "-g", reference, inputBam)
@@ -145,8 +140,6 @@ timeDict={'delly':0, 'manta':0, 'tardis':0}
 memoryDict = dict()
 cpuPercentDict = dict()
 cpuTimeDict = dict()
-
-
 
 start = time.time()
 runDelly()
@@ -236,10 +229,3 @@ for bar in bars5:
     yval = bar.get_height()
     plt.text(bar.get_x()+0.05, 1, "%.2f" % yval + "s")
 plt.show()
-
-
-
-
-
-
-
