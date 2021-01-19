@@ -1,0 +1,1 @@
+Sniffles outputs will be in this folder
