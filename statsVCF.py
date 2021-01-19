@@ -1,7 +1,5 @@
 import subprocess 
 import os 
-from subprocess import check_output
-
 
 os.system('ls *vcf > all_vcf.txt')
 

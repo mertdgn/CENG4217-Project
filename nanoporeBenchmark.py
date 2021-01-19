@@ -58,7 +58,6 @@ def runSniffles():
         cpuPercentTemp = p.cpu_percent(interval=1)
         if(cpuPercentTemp >= cpuPercent):
             cpuPercent = cpuPercentTemp
-        #print('.', end = '', flush=True)
     memStatus = (rss, vms)
     popen.wait()
     memoryDict['sniffles']=memStatus
@@ -89,7 +88,6 @@ def runCuteSV():
         cpuPercentTemp = p.cpu_percent(interval=1)
         if(cpuPercentTemp >= cpuPercent):
             cpuPercent = cpuPercentTemp        
-        #print('.', end = '', flush=True)
     memStatus = (rss, vms) 
     popen.wait()
     memoryDict['cuteSV']=memStatus
@@ -98,9 +96,6 @@ def runCuteSV():
     popen=subprocess.Popen(("mv", outputName+"CuteSV.vcf", "./NanoporeResults/cutesv/"), stdout=subprocess.PIPE)
     print("cuteSV finished")
     return
-
-
-
 
 
 inputBam = sys.argv[1]
