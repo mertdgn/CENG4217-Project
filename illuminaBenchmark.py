@@ -2,7 +2,6 @@ import subprocess
 import os 
 import time
 import matplotlib.pyplot as plt 
-import matplotlib.pyplot as plt2
 import sys
 import psutil
 import re
@@ -117,11 +116,9 @@ def runDelly():
     cpuTimeDict['delly']=cpuTimes
     cpuPercentDict['delly']=cpuPercent
 
-    argsToVCF=("bcftools","view", outputName+"Delly.bcf", ">", outputName+"Delly.vcf")
     cwd = os.getcwd()
-    os.chdir("./results/delly/")
-    popen=subprocess.Popen(argsToVCF, stdout=subprocess.PIPE)
-    popen.wait()
+    os.chdir("./IlluminaResults/delly/")
+    os.system('bcftools view ' + outputName+'Delly.bcf > ' + outputName +"Delly.vcf")
     os.chdir(cwd)
     
     print("delly finished")

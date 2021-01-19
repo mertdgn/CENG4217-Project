@@ -2,7 +2,6 @@ import subprocess
 import os 
 import time
 import matplotlib.pyplot as plt 
-import matplotlib.pyplot as plt2
 import sys
 import psutil
 import re
