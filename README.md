@@ -1,6 +1,16 @@
 # CENG4217-Project
 Python Scripts to benchmark SV Calling algorithms. 
 
+illuminaBenchmark.py is used to benchmark to tardis, delly and manta. It runs
+these tools sequentally and performs some measuerements about resource usages. 
+
+nanoporeBenchmark.py is used to benchmark to cuteSV, SVIM and Sniffles. It runs
+these tools sequentally and performs some measuerements about resource usages.
+
+VCF files and plots for measured data will be outputs.
+
+statsVCF.py is used to get statistics of different VCF files and write it to a single "result.txt" file.
+
 ### Requirements
 - Python 3
 - matplotlib, psutil and numpy libraries for python
